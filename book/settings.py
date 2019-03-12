@@ -26,6 +26,7 @@ SECRET_KEY = 'kvvi!skr*79e*1)smf0k5abky^vu13e-@5_)749v^2va@dz8tq'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = [u'9kin.pythonanywhere.com']
 
 
 # Application definition
@@ -135,4 +136,9 @@ STATIC_URL = '/static/'
 
 SITE_ID = 1
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# default static files settings for PythonAnywhere.
+# see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
+MEDIA_ROOT = u'/home/9kin/book/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = u'/home/9kin/book/static'
+STATIC_URL = '/static/'
